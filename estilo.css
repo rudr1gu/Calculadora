@@ -1,0 +1,252 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Young+Serif&display=swap');
+
+:root{
+    --cor1: #262626;
+    --cor2: #595959;
+    --cor3: #F2F2F2;
+    --cor4: #D0E2F2;
+    --cor5: #8D9AA6;
+}
+
+body{
+    align-items: center;
+    background: linear-gradient(45deg, var(--cor3), var(--cor4), var(--cor5));
+    display: flex;
+    font-family: 'Handlee', cursive;
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+}
+/*-------------------------------------------------navegador----------------------------------------------*/
+nav {
+    display: block;
+    position: absolute;
+    top:0;
+    background-color: var(--cor1);
+    width: 100%;
+    min-height: 70px;
+    max-height: 90px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    z-index: 1000;
+    font-family: 'Handlee', cursive;
+}
+
+.rede-sociais{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+li>a{
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px 0;
+    font-size: 1.2em;
+}
+
+.github:hover{
+    font-style: italic;
+    background: purple;
+    border-radius: 10px;
+}
+
+.insta:hover{
+    font-style: italic;
+    background: linear-gradient(90deg, #F20530, #D90452, #D90479, #BF048D, #BF04B3 );
+    border-radius: 10px;
+}
+
+.yt:hover{
+    font-style: italic;
+    background: red;
+    border-radius: 10px;
+}
+
+.link:hover{
+    font-style: italic;
+    background: blue;
+    border-radius: 10px;
+}
+
+span {
+    color: var(--cor4);
+}
+
+/*-------------------------------------------------cabeçalho----------------------------------------------*/
+
+header{
+    display: block;
+    position: absolute;
+    top: 90px;
+    color: var(--cor1);
+    text-shadow: 0 3px var(--cor5);
+    font-family: 'Handlee', cursive;
+
+}
+/*---------------------------------------calculadora-------------------------------------------------------*/
+.wrapper {
+    width: 24vw;
+    position: absolute;
+    top: 160px;
+    border-radius: 16px;
+    color: #232323;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    flex-basis: 400px;
+    padding: 20px 35px;
+    width: 30vw;
+}
+
+.screen{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(40, 40, 40, 0.1);
+    color: #232323;
+    font-size: 35px;
+    overflow: auto ;
+    padding: 20px;
+    text-align: right;
+    width: 100%;
+}
+ 
+.cal-button-row{
+    display: flex;
+    justify-content:space-between;
+    margin: 5% 0;
+}
+
+.calc-button {
+    backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px  rgba(0, 0, 0, 0.1);
+    color: #232323;
+    flex-basis: 20%;
+    font-family: inherit;
+    font-size: 2vw;
+    height: 7vh;
+}
+
+.calc-button:last-child{
+    backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px  rgba(0, 0, 0, 0.1);
+    color: white;
+    background: var(--cor1);
+}
+
+.calc-button:last-child:hover{
+    background-color: inherit;
+    color:inherit;
+}
+
+
+.calc-button:hover {
+    background-color: inherit;
+}
+
+.calc-button:active{
+    background-color: var(--cor4);
+}
+
+.double{
+    flex-basis: 47% ;
+}
+
+.triple{
+    flex-basis: 73%;
+}
+
+
+@media screen and (max-width: 500px){
+
+    li>a{
+        font-size: 16px;
+    }
+
+  
+
+    header{
+        font-size: 0.8em;
+    }
+
+    .wrapper {
+        top: 140px;
+        padding: 15px 25px;
+        height: 65vh;
+        width: 65vw;
+    }
+
+    
+    .screen{
+        width: 100%;
+        font-size: 25px;
+        padding: 10px;
+        text-align: right;
+    }
+    
+    .calc-button {
+     
+        font-size: 20px;
+        height: 7vh;
+    }
+
+}
+
+@media screen and (min-width: 501px) and (max-width:960px){
+
+    li>a{
+        font-size: 16px;
+    }
+
+  
+
+    header{
+        font-size: 0.8em;
+    }
+
+    .wrapper {
+        top: 140px;
+        padding: 15px 25px;
+        height: 62vh;
+        width: 40vw;
+    }
+
+    
+    .screen{
+        width: 100%;
+        font-size: 25px;
+        padding: 10px;
+        text-align: right;
+    }
+    
+    .calc-button {
+     
+        font-size: 20px;
+        height: 7vh;
+    }
+
+}
