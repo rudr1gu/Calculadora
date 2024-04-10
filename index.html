@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./view/gui.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKNJREFUSEvdldENgzAMRB+bwCbtZIhJWKWblE1aWQJEkKlxquMD/1hREj/nkugaxNGI6+MBHkAPWM7ECxgAy2t4gDfQZipv1lrxZwT4zAuy8rn7vCL3AVReQ/lwfkl0CWBpYH8vR2Nrqmg6OoEcUCNT6gRygFwiOSCSaN9A+hXJAXKJ5IBIIm8+/Af/GM4EdJHhmFWOFa522jJrZDnck7XFNPwLcY4xGSASQBAAAAAASUVORK5CYII=" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h2> <i class='bx bx-code-alt' ></i> Rudr<span>1</span>gu</h2>
+        <ul class="rede-sociais">
+            <li class="github"><a href="https://github.com/rudr1gu" target="_blank"><i class='bx bxl-github'></i>GitHub</a></li>
+            <li class="insta"><a href="https://instagram.com/rudr1gu" target="_blank"><i class='bx bxl-instagram' ></i>Instagram</a></li>
+            <li class="yt"><a href="https://youtube.com/@rudr1gu" target="_blank"><i class='bx bxl-youtube' ></i>YouTube</a></li>
+            <li class="link"><a href="https://linkedin.com/in/rudr1gu" target="_blank"><i class='bx bxl-linkedin-square' ></i>Linkdin</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+
+    <div class="wrapper">
+        <section class="screen" id="tela">
+            0
+        </section>
+
+        <section class="calc-buttons">
+            <div class="cal-button-row">
+                <button class="calc-button double">C</button>
+                <button class="calc-button">←</button>
+                <button class="calc-button"> &divide;</button>
+            </div>
+
+            <div class="cal-button-row">
+                <button class="calc-button">7</button>
+                <button class="calc-button">8</button>
+                <button class="calc-button"> 9</button>
+                <button class="calc-button">x</button>
+            </div>
+
+            <div class="cal-button-row">
+                <button class="calc-button">4</button>
+                <button class="calc-button">5</button>
+                <button class="calc-button">6</button>
+                <button class="calc-button">-</button>
+            </div>
+
+            <div class="cal-button-row">
+                <button class="calc-button">1</button>
+                <button class="calc-button">2</button>
+                <button class="calc-button">3</button>
+                <button class="calc-button">&plus;</button>
+            </div>
+            <div class="cal-button-row">
+                <button class="calc-button double">0</button>
+                <button class="calc-button">.</button>
+                <button class="calc-button">&equals;</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="./controllers/App.js" type="module"></script>
+    
+</body>
+</html>

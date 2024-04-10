@@ -1,17 +1,14 @@
-html{
-    box-sizing: border-box;
-    height: 100%;
-}
-
-*,
-*::before,
-*::after{
+*, *::before, *::after{
     box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Young+Serif&display=swap');
+body ,html{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
 
 :root{
     --cor1: #262626;
@@ -25,25 +22,24 @@ body{
     align-items: center;
     background: linear-gradient(45deg, var(--cor3), var(--cor4), var(--cor5));
     display: flex;
-    font-family: 'Handlee', cursive;
+    font-family:  "Josefin Sans",sans-serif;
     font-display: swap;
     height: inherit;
     justify-content: center;
 }
-/*-------------------------------------------------navegador----------------------------------------------*/
+
 nav {
     display: block;
     position: absolute;
     top:0;
     background-color: var(--cor1);
-    width: 100%;
+    width: 100vw;
     min-height: 70px;
     max-height: 90px;
     color: white;
     text-align: center;
     justify-content: center;
     z-index: 1000;
-    font-family: 'Handlee', cursive;
 }
 
 .rede-sociais{
@@ -87,22 +83,15 @@ span {
     color: var(--cor4);
 }
 
-/*-------------------------------------------------cabeçalho----------------------------------------------*/
-
 header{
     display: block;
     position: absolute;
     top: 90px;
     color: var(--cor1);
     text-shadow: 0 3px var(--cor5);
-    font-family: 'Handlee', cursive;
-
 }
-/*---------------------------------------calculadora-------------------------------------------------------*/
+
 .wrapper {
-    width: 24vw;
-    position: absolute;
-    top: 160px;
     border-radius: 16px;
     color: #232323;
     backdrop-filter: blur(4px);
@@ -111,7 +100,6 @@ header{
     border: 1px solid rgba(255, 255, 255, 0.3);
     flex-basis: 400px;
     padding: 20px 35px;
-    width: 30vw;
 }
 
 .screen{
@@ -124,7 +112,7 @@ header{
     color: #232323;
     font-size: 35px;
     overflow: auto ;
-    padding: 20px;
+    padding: 15px;
     text-align: right;
     width: 100%;
 }
@@ -144,7 +132,7 @@ header{
     color: #232323;
     flex-basis: 20%;
     font-family: inherit;
-    font-size: 2vw;
+    font-size: 1.2em;
     height: 7vh;
 }
 
@@ -181,72 +169,22 @@ header{
 }
 
 
-@media screen and (max-width: 500px){
+
+@media screen and (max-width:450px){
 
     li>a{
-        font-size: 16px;
+        font-size: 0.95em;
     }
-
-  
 
     header{
         font-size: 0.8em;
     }
-
-    .wrapper {
-        top: 140px;
-        padding: 15px 25px;
-        height: 65vh;
-        width: 65vw;
-    }
-
-    
     .screen{
-        width: 100%;
-        font-size: 25px;
         padding: 10px;
         text-align: right;
-    }
-    
-    .calc-button {
-     
+    }   
+    .calc-button {    
         font-size: 20px;
         height: 7vh;
-    }
-
-}
-
-@media screen and (min-width: 501px) and (max-width:960px){
-
-    li>a{
-        font-size: 16px;
-    }
-
-  
-
-    header{
-        font-size: 0.8em;
-    }
-
-    .wrapper {
-        top: 140px;
-        padding: 15px 25px;
-        height: 62vh;
-        width: 40vw;
-    }
-
-    
-    .screen{
-        width: 100%;
-        font-size: 25px;
-        padding: 10px;
-        text-align: right;
-    }
-    
-    .calc-button {
-     
-        font-size: 20px;
-        height: 7vh;
-    }
-
+     }
 }

@@ -1,10 +1,10 @@
-let resultado = 0
-let buffer = "0"
-let operadores
+let resultado = 0;
+let buffer = "0";
+let operadores;
 
-const screen = document.querySelector('.screen')
+const screen = document.getElementById('tela');
 
-function buttonClick(value){
+let btnClick = (value) =>{
     if(isNaN(value)){
         handleSymbol(value)
     } else {
@@ -14,7 +14,7 @@ function buttonClick(value){
     screen.innerText = buffer
 }
 
-function handleSymbol(symbol){
+let handleSymbol = (symbol) =>{
     switch(symbol){
     case 'C':
         buffer = '0';
@@ -47,12 +47,10 @@ function handleSymbol(symbol){
     case '÷':
         handleMath(symbol);
         break;
-
     }
-
 }
 
-function handleMath(symbol){
+let handleMath = (symbol) =>{
     if (buffer === '0'){
         return;
     }
@@ -69,7 +67,7 @@ function handleMath(symbol){
     buffer = '0'
 }
 
-function flushOperation(intbuffer){
+let flushOperation = (intbuffer) =>{
     if(operadores === '+'){
         resultado += intbuffer
     } else if( operadores === '-'){
@@ -81,7 +79,7 @@ function flushOperation(intbuffer){
     }
 }
 
-function handleNumber(numberString){
+let handleNumber = (numberString) =>{
     if (buffer === '0'){
         buffer = numberString
     } else{
@@ -89,9 +87,10 @@ function handleNumber(numberString){
     }
 }
 
-function init(){
+let init = () =>{
     document.querySelector('.calc-buttons').addEventListener('click', function(event){
-        buttonClick(event.target.innerText);
+        btnClick(event.target.innerText);
+        console.log(event.target)
     })
 }
 
